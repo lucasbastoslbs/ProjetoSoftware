@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Cadastro de Pessoa</title>
+</head>
+<body>
+  <h1>Cadastro de Pessoa</h1>
+  <br><br>
+  <form action="#" th:action="@{/pessoa/save}" th:object="${pessoa}" method="post">
+    <table>
+      <tr>
+        <td>* Nome: </td>
+        <td><input type="text" name="nome" th:field="*{nome}"></td>
+      </tr>
+      <tr>
+        <td>* E-mail: </td>
+        <td><input type="text" name="email" th:field="*{email}"></td>
+      </tr>
+      <tr>
+        <td>* Telefone: </td>
+        <td><input type="text" name="fone" th:field="*{fone}"></td>
+      </tr>
+    </table>
+    <br><br>
+    <input type="submit">
+    <a href="/">Voltar</a>
+  </form>
+</body>
+</html>
